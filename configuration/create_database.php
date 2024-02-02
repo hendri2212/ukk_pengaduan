@@ -25,7 +25,7 @@
         nik CHAR(16) NOT NULL PRIMARY KEY,
         name VARCHAR(35),
         username VARCHAR(25),
-        password VARCHAR(25),
+        password VARCHAR(100),
         telp VARCHAR(13)
     )");
 
