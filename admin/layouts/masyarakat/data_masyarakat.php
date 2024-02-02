@@ -1,6 +1,6 @@
 <?php $query = $conn->query("SELECT * FROM masyarakat") ?>
 <div class="bg-body-tertiary mt-2 p-3">
-    <h3>Data Masyarakat</h3>
+    <h4>Data Masyarakat</h4>
     <table class="table table-bordered">
         <thead>
             <tr>
