@@ -2,7 +2,7 @@
     $query = $conn->query("SELECT * FROM pengaduan WHERE id='".$_GET['id']."'");
     $data = $query->fetch_object();
 
-    $tanggapan = $conn->query("SELECT * FROM tanggapan WHERE pengaduan_id='".$_GET['id']."'");
+    $tanggapan = $conn->query("SELECT * FROM tanggapan JOIN petugas ON tanggapan.petugas_id=petugas.id WHERE pengaduan_id='".$_GET['id']."'");
 ?>
 <div class="bg-body-tertiary mt-2 p-3">
     <div class="d-flex">
@@ -26,7 +26,10 @@
     <h5>History Comment</h5>
     <?php while ($row = $tanggapan->fetch_object()) { ?>
         <div class="alert alert-primary" role="alert">
-            <?= $row->tanggapan ?>
+            <?=
+                "<span class='fw-bold fst-italic text-secondary'>".$row->name."</span><br>".
+                $row->tanggapan
+            ?>
         </div>
     <?php  } ?>
 </div>
