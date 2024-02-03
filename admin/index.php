@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (empty($_SESSION['petugas_id'])) {
+        header("Location: layouts/petugas/login_petugas.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,24 +27,16 @@
                             <a class="nav-link active" aria-current="page" href="home">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="petugas">Petugas</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="masyarakat">Masyarakat</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Pengaduan
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pengaduan_masuk">Pengaduan Masuk</a></li>
-                                <li><a class="dropdown-item" href="pengaduan_proses">Pengaduan Proses</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="pengaduan_selesai">Pengaduan Selesai</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pengaduan">Pengaduan</a>
                         </li>
                     </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                    <a href="logout" class="btn btn-outline-success">Logout</a>
                 </div>
             </div>
         </nav>
