@@ -7,7 +7,6 @@
 ?>
 
 <div class="d-flex justify-content-between align-items-center mb-2 border-bottom border-warning border-2">
-    <!-- <p class="pt-0 fs-5 mb-0">Details Report</p> -->
     <h5 class="text-secondary mb-0">Details Report</h5>
     
     <?php
