@@ -36,7 +36,7 @@
             if ($result->num_rows > 0) {
                 $row = $result->fetch_object();
                 $_SESSION['petugas_id'] = $row->id;
-                $_SESSION['name'] = $row->name;
+                $_SESSION['name_admin'] = $row->name;
                 $_SESSION['level'] = $row->level;
                 header("Location: ".$base_url."/pengaduan/admin");
                 exit();
